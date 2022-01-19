@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button, ButtonWrapper } from "./Buttons.styled";
+import { Button, ButtonBlock } from "./Buttons.styled";
 
 const Buttons = ({ options, onLeaveFeedback }) => {
   return (
-    <ButtonWrapper>
+    <ButtonBlock>
       {options.map((option, index) => (
         <Button key={index} onClick={() => onLeaveFeedback(option)}>
           {option}
         </Button>
       ))}
-    </ButtonWrapper>
+    </ButtonBlock>
   );
 };
 Buttons.propTypes = {
